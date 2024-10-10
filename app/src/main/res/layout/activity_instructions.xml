@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/instructions_background"
+    android:padding="16dp">
+
+    <!-- Anleitung -->
+    <TextView
+        android:id="@+id/instructionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Knucklebones - Anleitung"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <!-- anleitung text -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instructionsTitle"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/instructionsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Knucklebones ist ein strategisches Würfelspiel aus Cult of the Lamb. Ziel des Spiels ist es, mehr Punkte als dein Gegner zu sammeln. Jeder Spieler hat ein 3x3-Feld und würfelt abwechselnd. Wenn du würfelst, kannst du das Ergebnis in einer Spalte platzieren. Legst du mehrere Würfel mit demselben Wert in eine Spalte, multipliziert sich der Wert. Setze deine Würfel klug, um die Würfel deines Gegners zu zerstören und die höchste Punktzahl zu erreichen!"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:lineSpacingExtra="4dp"
+            android:padding="8dp" />
+    </ScrollView>
+</RelativeLayout>

@@ -1,38 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/instructions_background"
     android:padding="16dp">
 
-    <!-- Anleitung -->
+    <!-- Title for Instructions -->
     <TextView
         android:id="@+id/instructionsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Knucklebones - Anleitung"
-        android:textSize="26sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
+        android:shadowColor="#AA000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="4"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp" />
 
-    <!-- anleitung text -->
-    <ScrollView
+    <!-- Text Box Container with Shadow and Rounded Corners -->
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/instructionsTitle"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="24dp"
+        android:padding="16dp"
+        android:background="@drawable/text_box_background">
 
-        <TextView
-            android:id="@+id/instructionsText"
+        <!-- Scrollable Text for Instructions -->
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Knucklebones ist ein strategisches Würfelspiel aus Cult of the Lamb. Ziel des Spiels ist es, mehr Punkte als dein Gegner zu sammeln. Jeder Spieler hat ein 3x3-Feld und würfelt abwechselnd. Wenn du würfelst, kannst du das Ergebnis in einer Spalte platzieren. Legst du mehrere Würfel mit demselben Wert in eine Spalte, multipliziert sich der Wert. Setze deine Würfel klug, um die Würfel deines Gegners zu zerstören und die höchste Punktzahl zu erreichen!"
-            android:textSize="18sp"
-            android:textColor="#FFFFFF"
-            android:lineSpacingExtra="4dp"
-            android:padding="8dp" />
-    </ScrollView>
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/instructionsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Willkommen bei Knucklebones! In diesem Spiel ist es das Ziel, mehr Punkte als dein Gegner zu sammeln, indem du strategisch Würfel platzierst.\n\n2. Regeln:\n- Jeder Spieler hat ein 3x3-Raster.\n- Spieler werfen abwechselnd einen Würfel und platzieren ihn in einer Spalte. Würfel mit demselben Wert in einer Spalte werden multipliziert.\n\n3. Strategie:\nPlatziere Würfel geschickt, um deine Punktzahl zu erhöhen oder die Würfel deines Gegners zu zerstören, indem du übereinstimmende Werte in derselben Spalte platzierst.\n\nViel Erfolg und Spaß beim Spiel!"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:lineSpacingExtra="6dp" />
+        </ScrollView>
+    </RelativeLayout>
 </RelativeLayout>

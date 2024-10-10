@@ -12,25 +12,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Knucklebones"
         tools:targetApi="31">
+
+        <!-- SplashActivity as the launcher activity -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Other activities -->
         <activity
             android:name=".InstructionsActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light" />
+
         <activity
             android:name=".GameActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light" />
     </application>
 
 </manifest>

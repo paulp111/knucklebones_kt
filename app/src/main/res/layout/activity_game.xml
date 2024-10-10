@@ -4,104 +4,131 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#972733"
-    android:padding="16dp">
+    android:padding="8dp">
 
-    <!-- TODO Player Title -->
+    <!-- Spieler-Titel -->
     <TextView
         android:id="@+id/playerTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Spieler"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="8dp" />
 
-    <!-- TODO Player Score -->
+    <!-- Spieler-Score -->
     <TextView
         android:id="@+id/playerScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Punkte: 0"
         android:textSize="18sp"
         android:textColor="#FFFFFF"
         android:layout_below="@id/playerTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="4dp" />
 
-    <!-- Player Grid -->
+    <!-- Spieler-Gitter -->
     <GridLayout
         android:id="@+id/playerGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/playerScore"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:columnCount="3"
         android:rowCount="3"
         android:alignmentMode="alignMargins"
         android:useDefaultMargins="true">
 
-        <!-- PLayer 3x3 Grid -->
-        <Button android:id="@+id/playerCell_0_0" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 0,0" />
-        <Button android:id="@+id/playerCell_0_1" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 0,1" />
-        <Button android:id="@+id/playerCell_0_2" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 0,2" />
+        <!-- Spieler Zellen -->
+        <Button android:id="@+id/playerCell_0_0" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 0,0" />
+        <Button android:id="@+id/playerCell_0_1" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 0,1" />
+        <Button android:id="@+id/playerCell_0_2" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 0,2" />
 
-        <Button android:id="@+id/playerCell_1_0" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 1,0" />
-        <Button android:id="@+id/playerCell_1_1" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 1,1" />
-        <Button android:id="@+id/playerCell_1_2" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 1,2" />
+        <Button android:id="@+id/playerCell_1_0" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 1,0" />
+        <Button android:id="@+id/playerCell_1_1" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 1,1" />
+        <Button android:id="@+id/playerCell_1_2" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 1,2" />
 
-        <Button android:id="@+id/playerCell_2_0" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 2,0" />
-        <Button android:id="@+id/playerCell_2_1" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 2,1" />
-        <Button android:id="@+id/playerCell_2_2" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 2,2" />
+        <Button android:id="@+id/playerCell_2_0" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 2,0" />
+        <Button android:id="@+id/playerCell_2_1" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 2,1" />
+        <Button android:id="@+id/playerCell_2_2" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 2,2" />
     </GridLayout>
 
-    <!-- TODO Computer Title -->
+    <!-- Computer-Titel -->
     <TextView
         android:id="@+id/computerTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Computergegner"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:layout_below="@id/playerGrid"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="16dp" />
 
-    <!-- TODO Computer Score -->
+    <!-- Computer-Score -->
     <TextView
         android:id="@+id/computerScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Punkte: 0"
         android:textSize="18sp"
         android:textColor="#FFFFFF"
         android:layout_below="@id/computerTitle"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp" />
 
-    <!-- Computer Grid -->
+    <!-- Computer-Gitter -->
     <GridLayout
         android:id="@+id/computerGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/computerScore"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:columnCount="3"
         android:rowCount="3"
         android:alignmentMode="alignMargins"
         android:useDefaultMargins="true">
 
-        <!-- Computer 3x3 Grid -->
-        <Button android:id="@+id/computerCell_0_0" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 0,0" />
-        <Button android:id="@+id/computerCell_0_1" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 0,1" />
-        <Button android:id="@+id/computerCell_0_2" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 0,2" />
+        <!-- Computer Zellen -->
+        <Button android:id="@+id/computerCell_0_0" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 0,0" />
+        <Button android:id="@+id/computerCell_0_1" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 0,1" />
+        <Button android:id="@+id/computerCell_0_2" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 0,2" />
 
-        <Button android:id="@+id/computerCell_1_0" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 1,0" />
-        <Button android:id="@+id/computerCell_1_1" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 1,1" />
-        <Button android:id="@+id/computerCell_1_2" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 1,2" />
+        <Button android:id="@+id/computerCell_1_0" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 1,0" />
+        <Button android:id="@+id/computerCell_1_1" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 1,1" />
+        <Button android:id="@+id/computerCell_1_2" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 1,2" />
 
-        <Button android:id="@+id/computerCell_2_0" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 2,0" />
-        <Button android:id="@+id/computerCell_2_1" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 2,1" />
-        <Button android:id="@+id/computerCell_2_2" android:layout_width="0dp" android:layout_height="100dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 2,2" />
+        <Button android:id="@+id/computerCell_2_0" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 2,0" />
+        <Button android:id="@+id/computerCell_2_1" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 2,1" />
+        <Button android:id="@+id/computerCell_2_2" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 2,2" />
     </GridLayout>
 
+    <!-- Würfel logik -->
+    <Button
+        android:id="@+id/rollDiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Würfeln"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/diceResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Würfelwert: "
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:layout_above="@id/rollDiceButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp" />
+
+
 </RelativeLayout>
+

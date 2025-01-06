@@ -1,5 +1,5 @@
 package com.paulp1111.knucklebones
-
+//imports
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -17,6 +17,9 @@ class GameActivity : AppCompatActivity() {
     private lateinit var computerCells: Array<Button>
     private lateinit var playerScoreText: TextView
     private lateinit var computerScoreText: TextView
+
+    private val playerColumnScores = IntArray(3) { 0 }
+    private val computerColumnScores = IntArray(3) { 0 }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,39 +85,47 @@ class GameActivity : AppCompatActivity() {
                 diceResult.text = "Gegnerischer Würfel entfernt!"
             }
         }
+
+        if (isPlayer) {
+            playerColumnScores[column] = calculateColumnScore(column, playerCells)
+        } else {
+            computerColumnScores[column] = calculateColumnScore(column, computerCells)
+        }
+        updateScores()
     }
+// Changes:
+// Berechnet die Punktzahl für die angeklickte Spalte
+// wegen dem problem mit der Rechenleistung anstatt alle Zellen neu zu berechnen,
 
     private fun updateScores() {
-        val playerScore = calculateScore(playerCells)
-        val computerScore = calculateScore(computerCells)
+        // Berechne nur die Gesamtscores aus den Spaltenwerten
+        val playerScore = playerColumnScores.sum()
+        val computerScore = computerColumnScores.sum()
         playerScoreText.text = "Punkte: $playerScore"
         computerScoreText.text = "Punkte: $computerScore"
     }
 
-    private fun calculateScore(cells: Array<Button>): Int {
-        var score = 0
-        for (col in 0..2) {
-            var columnScore = 0
-            var countMap = mutableMapOf<Int, Int>()
+    private fun calculateColumnScore(column: Int, cells: Array<Button>): Int {
+        var columnScore = 0
+        val countMap = mutableMapOf<Int, Int>()
 
-            for (i in col until cells.size step 3) {
-                val value = cells[i].text.toString().toIntOrNull()
-                if (value != null) {
-                    countMap[value] = countMap.getOrDefault(value, 0) + 1
-                }
+        // Werte im aktuellen Spalte sammeln und zählen
+        for (i in column until cells.size step 3) {
+            val value = cells[i].text.toString().toIntOrNull()
+            if (value != null) {
+                countMap[value] = countMap.getOrDefault(value, 0) + 1
             }
-
-            for ((num, count) in countMap) {
-                columnScore += num * count * count // Multiplikation
-            }
-            score += columnScore
         }
-        return score
+
+        // Punktzahl berechnen
+        for ((num, count) in countMap) {
+            columnScore += num * count * count
+        }
+        return columnScore
     }
 
     private fun switchTurn() {
         isPlayerTurn = !isPlayerTurn
         diceResult.text = if (isPlayerTurn) "Spieler ist dran" else "Computer ist dran"
     }
-
 }

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class SplashActivity : AppCompatActivity() {
 
-    private var hasNavigated = false // Flag to track navigation to MainActivity
+    private var hasNavigated = false // to track navigation to MainActivity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,25 +22,25 @@ class SplashActivity : AppCompatActivity() {
         videoView.setVideoURI(videoUri)
         videoView.start()
 
-        // Listener to navigate to MainActivity after the video finishes
+        //navigate to MainActivity after video finishes
         videoView.setOnCompletionListener {
             navigateToMainActivity()
         }
 
-        // Fallback: navigate to MainActivity after 5 seconds if the video fails
+        // Fallback after 5 seconds
         Handler(Looper.getMainLooper()).postDelayed({
             if (!videoView.isPlaying) {
                 navigateToMainActivity()
             }
-        }, 5000) // 5-second fallback
+        }, 5000) //
     }
 
-    // Method to navigate to MainActivity and ensure it only happens once
+    // nav to MainActivitiy only once
     private fun navigateToMainActivity() {
         if (!hasNavigated) {
-            hasNavigated = true // Set the flag to true to prevent duplicate navigation
+            hasNavigated = true // prevent duplicate
             startActivity(Intent(this, MainActivity::class.java))
-            finish() // End SplashActivity
+            finish() // End
         }
     }
 }

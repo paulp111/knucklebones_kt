@@ -6,7 +6,7 @@
     android:background="#972733"
     android:padding="8dp">
 
-    <!-- Spieler-Titel -->
+    <!-- Spieler-->
     <TextView
         android:id="@+id/playerTitle"
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp" />
 
-    <!-- Spieler-Score -->
+    <!-- Spieler Score -->
     <TextView
         android:id="@+id/playerScore"
         android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp" />
 
-    <!-- Spieler-Gitter -->
+    <!-- Spieler Grid -->
     <GridLayout
         android:id="@+id/playerGrid"
         android:layout_width="match_parent"
@@ -57,7 +57,7 @@
         <Button android:id="@+id/playerCell_2_2" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Player cell 2,2" />
     </GridLayout>
 
-    <!-- Computer-Titel -->
+    <!-- Computer -->
     <TextView
         android:id="@+id/computerTitle"
         android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
 
-    <!-- Computer-Score -->
+    <!-- Computer Score -->
     <TextView
         android:id="@+id/computerScore"
         android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp" />
 
-    <!-- Computer-Gitter -->
+    <!-- Computer Grid -->
     <GridLayout
         android:id="@+id/computerGrid"
         android:layout_width="match_parent"
@@ -108,7 +108,7 @@
         <Button android:id="@+id/computerCell_2_2" android:layout_width="0dp" android:layout_height="80dp" android:layout_columnWeight="1" android:text="" android:contentDescription="Computer cell 2,2" />
     </GridLayout>
 
-    <!-- Würfel logik -->
+    <!-- Würfel -->
     <Button
         android:id="@+id/rollDiceButton"
         android:layout_width="wrap_content"

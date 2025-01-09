@@ -44,10 +44,12 @@ The instructions screen provides:
 
 ### Visuals
 
-![Splash Screen]
-![Main Menu]
-![Instructions]
-![Gameplay]
+**Check:**
+
+-Splash Screen
+-Main Menu
+-Instructions
+-Gameplay
 
 ## Code Overview
 

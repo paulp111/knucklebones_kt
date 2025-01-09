@@ -88,12 +88,6 @@ The instructions screen provides:
 3. Sync Gradle files.
 4. Run the app on an emulator or physical device.
 
-## Future Improvements
-
-- Multiplayer mode (online and local)
-- Enhanced AI difficulty levels
-- Customizable themes and dice styles
-
 ---
 
 Enjoy playing Knucklebones and may your strategy outshine your opponent's!

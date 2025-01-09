@@ -46,10 +46,10 @@ The instructions screen provides:
 
 **Check:**
 
--Splash Screen
--Main Menu
--Instructions
--Gameplay
+- Splash Screen
+- Main Menu
+- Instructions
+- Gameplay
 
 ## Code Overview
 

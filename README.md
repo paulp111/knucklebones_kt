@@ -2,6 +2,10 @@
 
 Knucklebones is a strategic dice game inspired by the minigame in *Cult of the Lamb*. This Android application, written in Kotlin, offers a single-player experience where users compete against a computer opponent. Players strategically place dice values on a 3x3 grid to maximize their score and disrupt their opponent's strategy.
 
+# Important!
+**You have to roll the Dice (click the "Würfeln" button) and then set in the desired field.**
+**There is no automatic roll function, it's meant as a 2 player game. Enjoy 😊**
+
 ## Features
 
 - **Interactive Gameplay**: Players roll dice and place them on their grid, aiming to score higher than their opponent.

@@ -70,7 +70,7 @@ class GameActivity : AppCompatActivity() {
                 diceResult.text = "Bitte wähle eine leere Zelle aus!"
             }
         } else {
-            diceResult.text = if (isPlayerTurn) "Spieler ist dran" else "Computer ist dran"
+            diceResult.text = if (isPlayerTurn) "Spieler 1 ist dran" else "Spieler 2 ist dran"
         }
     }
 
@@ -98,7 +98,6 @@ class GameActivity : AppCompatActivity() {
 // wegen dem problem mit der Rechenleistung anstatt alle Zellen neu zu berechnen,
 
     private fun updateScores() {
-        // Berechne nur die Gesamtscores aus den Spaltenwerten
         val playerScore = playerColumnScores.sum()
         val computerScore = computerColumnScores.sum()
         playerScoreText.text = "Punkte: $playerScore"
@@ -126,6 +125,6 @@ class GameActivity : AppCompatActivity() {
 
     private fun switchTurn() {
         isPlayerTurn = !isPlayerTurn
-        diceResult.text = if (isPlayerTurn) "Spieler ist dran" else "Computer ist dran"
+        diceResult.text = if (isPlayerTurn) "Spieler 1 ist dran" else "Spieler 2 ist dran"
     }
 }
